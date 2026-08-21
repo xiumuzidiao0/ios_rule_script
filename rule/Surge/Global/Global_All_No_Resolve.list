@@ -1,15 +1,15 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-08-16 02:21:22
+# UPDATED: 2026-08-20 02:26:58
 # DOMAIN: 128
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34722
+# DOMAIN-SUFFIX: 34724
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
 # USER-AGENT: 46
-# TOTAL: 35049
+# TOTAL: 35051
 DOMAIN,1password.drift.click
 DOMAIN,adobeereg.com
 DOMAIN,agb9r0ad.qllfkl.com
@@ -18162,6 +18162,7 @@ DOMAIN-SUFFIX,nonlinearnastran.com
 DOMAIN-SUFFIX,nonstopfap.com
 DOMAIN-SUFFIX,noodlemagazine.com
 DOMAIN-SUFFIX,noosferabank.ru
+DOMAIN-SUFFIX,nordcdn.com
 DOMAIN-SUFFIX,norfolkcove.ac.uk
 DOMAIN-SUFFIX,norland.ac.uk
 DOMAIN-SUFFIX,normanmanagedservices.ac.uk
@@ -21413,6 +21414,7 @@ DOMAIN-SUFFIX,rutracker.cc
 DOMAIN-SUFFIX,rutracker.cr
 DOMAIN-SUFFIX,rutracker.me
 DOMAIN-SUFFIX,rutracker.nl
+DOMAIN-SUFFIX,rutracker.wiki
 DOMAIN-SUFFIX,rutrecker.net
 DOMAIN-SUFFIX,rutube.sport
 DOMAIN-SUFFIX,rutubelist.ru
@@ -26576,7 +26578,6 @@ DOMAIN-SUFFIX,windowsuem.com
 DOMAIN-SUFFIX,windsor-forest.ac.uk
 DOMAIN-SUFFIX,windsurf.build
 DOMAIN-SUFFIX,windsurf.com
-DOMAIN-SUFFIX,windy.com
 DOMAIN-SUFFIX,wing.com
 DOMAIN-SUFFIX,winhec.com
 DOMAIN-SUFFIX,winhec.net
@@ -34470,6 +34471,7 @@ DOMAIN-SUFFIX,willw.net
 DOMAIN-SUFFIX,wilsoncenter.org
 DOMAIN-SUFFIX,windowsphoneme.com
 DOMAIN-SUFFIX,windscribe.com
+DOMAIN-SUFFIX,windy.com
 DOMAIN-SUFFIX,wingamestore.com
 DOMAIN-SUFFIX,wingy.site
 DOMAIN-SUFFIX,winning11.com
