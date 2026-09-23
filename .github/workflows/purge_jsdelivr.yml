@@ -3,7 +3,7 @@ name: Purge jsDelivr Cache
 on:
   push:
     branches:
-      - main # 如果你的主分支是 main，请改为 main
+      - master # 如果你的主分支是 main，请改为 main
 
 jobs:
   purge:
