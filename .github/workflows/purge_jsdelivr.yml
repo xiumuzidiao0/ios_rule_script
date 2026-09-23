@@ -38,6 +38,6 @@ jobs:
             PURGE_URL="https://purge.jsdelivr.net/gh/${{ github.repository }}@${{ github.ref_name }}/$file"
             echo "正在刷新缓存: $PURGE_URL"
             
-            RESPONSE=$(curl -s -X POST "$PURGE_URL")
+            RESPONSE=$(curl -s POST "$PURGE_URL")
             echo "返回结果: $RESPONSE"
           done
