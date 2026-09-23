@@ -3,7 +3,10 @@ name: Purge jsDelivr Cache
 on:
   push:
     branches:
-      - master # 如果你的主分支是 main，请改为 main
+      - master
+    paths:
+      - 'rule/**'               # 仅当 rule 文件夹及子目录内的文件变动时触发
+      # - 'rule_provider/**'    # 如有其他目录可在此按需追加
 
 jobs:
   purge:
@@ -12,11 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2 # 拉取最近 2 次提交以比对差异文件
+          fetch-depth: 2
 
       - name: Get changed files and purge jsDelivr cache
         run: |
-          # 获取本次提交修改或新增的文件列表
           CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
 
           if [ -z "$CHANGED_FILES" ]; then
@@ -27,17 +29,10 @@ jobs:
           echo "本次修改的文件:"
           echo "$CHANGED_FILES"
 
-          # 遍历变动文件并请求 jsdelivr purge 接口
           for file in $CHANGED_FILES; do
-            # 排除非规则文件或隐秘文件（如 .github 目录下的配置）
-            if [[ "$file" =~ ^\.github/ ]]; then
-              echo "跳过系统文件: $file"
-              continue
-            fi
-
             PURGE_URL="https://purge.jsdelivr.net/gh/${{ github.repository }}@${{ github.ref_name }}/$file"
             echo "正在刷新缓存: $PURGE_URL"
             
-            RESPONSE=$(curl -s POST "$PURGE_URL")
+            RESPONSE=$(curl -s "$PURGE_URL")
             echo "返回结果: $RESPONSE"
           done
